@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'VK Sans';
+    src: url('/static/fonts/vksansm.ttf');
+    src: local('VK Sans Medium'), local('VKSans-Medium'),
+        url('/static/fonts/vksansm.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+                }
+@import url('fonts__main.css');

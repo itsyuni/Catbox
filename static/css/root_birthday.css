@@ -1,0 +1,12 @@
+.birthday_header {
+    color: rgb(141, 0, 82);
+    font-size: 25px;
+}
+
+.birthday_header_descp {
+    color: rgb(126, 0, 73);
+    font-size: 20px;
+    margin-right: 300px;
+    margin-left: 300px;
+    font-weight: 300;
+}

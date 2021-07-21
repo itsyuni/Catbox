@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>OpHog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="icon" 
+		      type="image/png" 
+		      href="favicon.ico">
+      
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/ui/le-frog/jquery-ui-1.10.2.custom.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <style>
+            .hideit { opacity:0.0;}
+
+            /*Order matters here*/
+            .testactive { opacity:.25; }
+            .testhover { opacity:.75; }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+		<!-- Give the canvas a cursor. Also, the reason it is set to a height so small is so that a vertical scrollbar doesn't appear while loading the game. If one did, then Camera.browserSizeChanged would take the scrollbar into account when setting the canvas size. To the user, it's not really a perceptible change, but the canvas' width would be off, so other things like textbox-relocating would fail, and those changes ARE noticeable. -->
+        <canvas id="canvas" style="cursor: pointer;z-index:0; width:100%; height:61px" ></canvas>
+        <canvas id="ui-canvas" style="cursor: pointer;z-index:0; position:relative;top:-5px;left:0px; width:100%; height:60px" ></canvas>
+	    
+	    <!-- This is to correct a really weird problem that's only in Chrome.
+	    	If I put the scrollable slots over the canvas, then sometimes the foreground image won't scroll correctly.
+	    	For some reason, I need to do ".html" on any random element on the page and put an HTML tag in there.
+	    	An HTML tag without effects works best, e.g. "<b></b>". Plaintext alone won't work (e.g. "a").
+	    	
+	    	This is only in Chrome. It's only when the scrollable element is over a canvas. It's only the foreground image
+	    	(the item image, not the slot background image) that shows this problem.
+	    	 -->
+	    <span id="garbage"></span>
+
+        <span class="le-frog">
+            <button style="display:none;z-index:0" id='retryButton'></button>
+            <button style="display:none;z-index:0" id='goToOverworldButton'></button>
+        </span>
+	    
+	    <div id="inventory-screen" title="Inventory" class="no-text-select">
+
+            <!-- Top part -->
+            <div id="top_part_with_characters_and_items" style="position:absolute;top:0px;left:0px;width:100%;margin-top:5px">
+
+                <!-- Each character section is horizontal, but they are vertically aligned -->
+                <div id="char-section" style="margin-right:1px;float:left">
+                    <div id="war-section" style="width:110px;"></div>
+                    <div id="wiz-section" style="width:110px;"></div>
+                    <div id="arch-section" style="width:110px;"></div>
+                </div>
+    			<div id="equippable-item-scroll-pane" style="margin-right:5px;" class="scroll-pane"></div>
+    			<div id="usable-item-scroll-pane" style="margin-right:5px;" class="scroll-pane"></div>
+                <button id='useItemButton' style="margin-bottom:50px">Use</button><br/>
+                <button id='sellItemButton'>Sell</button>
+            </div>
+
+            <!-- Bottom part -->
+			<div id="item-description" class="equip-slot text-select" style="position:absolute;top:150px;left:0px;border:1px solid gray;width:99%;height:132px"></div>
+	    </div>
+
+        <div id="shop-screen" title="Shop" class="no-text-select">
+            <div id="shop_div_without_item_description_in_it" style="position:absolute;top:0px;left:0px;width:100%;margin-top:5px">
+                <div id="shop_div_buy_button_and_timer" style="width: 340px;margin: 0px auto;">
+                    <button id="shopBuyButton" style="margin-bottom:5px; font-size:.75em">Buy</button>
+                    <span id="newItemTimer" style="float: right"></span>
+                </div>
+
+                <!-- Items the user can buy -->
+                <div id="shopui-equippable-item-pane" class="static-pane"></div>
+                <div id="shopui-usable-item-pane" class="static-pane"></div>
+            </div>
+
+            <!-- Description text of the selected item -->
+            <div id="shopui-item-description" class="equip-slot text-select" style="position:absolute;top:120px;left:0px;border:1px solid gray;width:99%;height:132px"></div>
+        </div>
+
+        <div id="minigame-ui" title="Minigame" class="no-text-select"></div>
+        <div id="book-ui" title="Book"></div>
+
+        <!-- This is used for styling the inventory UI -->
+        <span style="opacity:.95;" class="le-frog" id="inventoryThemeSpan"></span>
+        <!-- This is used for styling the settings UI -->
+        <span style="opacity:.95;" class="le-frog" id="settingsDialogThemeSpan"></span>
+        <!-- This is used for styling the unit placement UI -->
+        <span style="opacity:.95;" class="le-frog" id="unitPlacementDialogThemeSpan"></span>
+        <!-- This is used for styling the shop UI -->
+        <span style="opacity:.95;" class="le-frog" id="shopDialogThemeSpan"></span>
+        <!-- This is used for styling the minigame UI -->
+        <span style="opacity:.95" class="le-frog" id="minigameUIThemeSpan"></span>
+        <!-- This is used for styling the book dialog -->
+        <span style="opacity:.95" class="le-frog" id="bookUIDialogThemeSpan"></span>
+
+        <!-- The button to open the settings UI -->
+        <span class="le-frog">
+            <button style="width:25px;" id='settingsButton'></button>
+        </span>
+
+        <!-- The button to minimize/restore the minimap -->
+        <span class="le-frog">
+            <button style="width:25px;" id='toggleMinimapVisibility'></button>
+        </span>
+
+        <!-- These are the contents of the settings UI. display:none is given so that there's no vertical scrollbar on the page as it's loading. When you open the settings dialog, that property will be removed automatically by JQuery UI.  -->
+        <div style="border:1px solid gray;background-color:#373737;display:none" id="settingsDialog" title="Settings">
+            <button style="margin-top:5px;" id='showInventory'>Show inventory</button><br/>
+            <button style="margin-top:5px;" id='showShop'>Shop</button><br/>
+            <button style="margin-top:5px;" id='forfeit'>Forfeit</button><br/>
+            <!-- This is also for spacing since radio buttons will always fill their margin/padding for some reason -->
+            <div style="margin-top:5px">Graphics:</div>
+            <input type="radio" name="graphicsSettings" id="graphicsLow"/><label for="graphicsLow">Low</label>
+            <input type="radio" name="graphicsSettings" id="graphicsHigh"/><label for="graphicsHigh">High</label><br/>
+            <div style="margin-top:5px">Audio:</div>
+            <input type="radio" name="audioSetting" id="audioOff"/><label for="audioOff">Off</label>
+            <input type="radio" name="audioSetting" id="audioOn"/><label for="audioOn">On</label><br/>
+            <div style="margin-top:5px">Sound:</div>
+            <div id="soundSlider"></div>
+            <div style="margin-top:5px">Music:</div>
+            <div id="musicSlider"></div>
+            <div style="margin-top:5px">Minimap position:</div>
+            <input type="radio" name="minimapSetting" id="minimapUpLeft"/><label for="minimapUpLeft"></label>
+            <input type="radio" name="minimapSetting" id="minimapUpRight"/><label for="minimapUpRight"></label><br/>
+            <input type="radio" name="minimapSetting" id="minimapDownLeft"/><label for="minimapDownLeft"></label>
+            <input type="radio" name="minimapSetting" id="minimapDownRight"/><label for="minimapDownRight"></label><br/>
+            <div style="margin-top:5px"></div><!--This is just for spacing-->
+            <input type="checkbox" id="showLootNotifications"/><label for="showLootNotifications">Show loot notifications</label><br/>
+            <div style="margin-top:5px">Show life bars for:</div>
+            <input type="checkbox" id="showLifebarPlayer"/><label style="margin-top:1px" for="showLifebarPlayer">Player</label><br/>
+            <input type="checkbox" id="showLifebarEnemy"/><label style="margin-top:3px" for="showLifebarEnemy">Enemy</label><br/>
+            <input type="checkbox" id="showLifebarCastle" checked/><label style="margin-top:3px" for="showLifebarCastle">Castles</label><br/>
+        </div>
+
+        <div id="useItemInstructions" style="background-color:#22a050;color:white;text-align:center;"></div>
+
+        <!-- Make sure this shows above everything else -->
+        <div class="le-frog" id="loadingDiv" style="z-index:99999; left:0; top:0; width:100%; height:100%; position:absolute; background-color:#373737">
+
+            <!-- Add some padding so that this is in the middle of the page -->
+            <div style="height:45%"></div>
+            <div id="loadProgress" style="height:100px;display:none" ><div id="progressLabel" class="progress-label">Loading: 0%</div></div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/vendor/jquery.mousewheel.js"></script>
+        <script src="js/vendor/ui/jquery-ui-1.10.2.custom.js"></script>
+        <script src="js/LoadingManager.js"></script>
+        <!-- This needs to be defined after jquery-ui -->
+        <!-- Touch punch allows various jquery UI components to work with touch. -->
+        <script src="js/vendor/jquery.ui.touch-punch.js"></script>
+        <script src="js/vendor/ui/jquery.hammer.js"></script>
+        <script src="js/plugins.js"></script>
+
+        <!-- Constants.js should come first since it defines window.game and window.game.util -->
+        <script src="js/AddLoadProgress.js"></script>
+        <script src="js/Constants.js"></script>
+        <script src="js/Gradient.js"></script>
+        <script src="js/data/GraphicIndexConstants.js"></script>
+        <script src="js/HammerHelper.js"></script>
+        <script src="js/JSONDecycle.js"></script>
+        <script src="js/Util.js"></script>
+        <script src="js/data/AbilityData.js"></script><!--Needs to come before UnitData.js and Item.js so that they can both manifest abilities-->
+        <script src="js/AbilityManager.js"></script>
+        <script src="js/GraphicsUtil.js"></script>
+        <script src="js/KeyEventConstants.js"></script>
+        <script src="js/Camera.js"></script>
+        <script src="js/PuzzlePiece.js"></script>
+        <script src="js/Minimap.js"></script>
+        <script src="js/GameStateManager.js"></script>
+        <script src="js/SpriteSheet.js"></script>
+        <script src="js/AnimatedSprite.js"></script>
+        <script src="js/AnimatedSpriteManager.js"></script>
+        <script src="js/Particle.js"></script>
+        <script src="js/ParticleSystem.js"></script>
+        <script src="js/ParticleManager.js"></script>
+        <script src="js/InventoryUI.js"></script>
+        <script src="js/PlayerInventoryUI.js"></script>
+        <script src="js/Slot.js"></script>
+        <script src="js/AddLoadProgress.js"></script>
+        <script src="js/PlayerSlot.js"></script>
+        <script src="js/ShopSlot.js"></script>
+        <script src="js/Inventory.js"></script>
+        <script src="js/PlayerInventory.js"></script>
+        <script src="js/ShopInventory.js"></script>
+        <script src="js/Player.js"></script>
+        <script src="js/item/ItemMod.js"></script>
+        <script src="js/item/mod/LifeLeech.js"></script>
+        <script src="js/item/mod/Regen.js"></script>
+        <script src="js/item/mod/Poison.js"></script>
+        <script src="js/item/mod/Thorns.js"></script>
+        <script src="js/item/mod/ReduceDamage.js"></script>
+        <script src="js/item/mod/MultipleProjectiles.js"></script>
+        <script src="js/Tileset.js"></script>
+        <script src="js/TilesetManager.js"></script>
+        <script src="js/AddLoadProgress.js"></script>
+        <script src="js/Doodad.js"></script>
+        <script src="js/MapGenerator.js"></script>
+        <script src="js/data/LootTableEntry.js"></script>
+        <script src="js/data/ItemData.js"></script><!--Needs to come before UnitData.js so that units can say which items they drop-->
+        <script src="js/Item.js"></script>
+        <script src="js/data/UnitData.js"></script>
+        <script src="js/OverworldMap.js"></script><!--Must come after UnitData.js-->
+        <script src="js/PossibleEnemy.js"></script>
+        <script src="js/SlotUI.js"></script>
+        <script src="js/PlayerSlotUI.js"></script>
+        <script src="js/ShopSlotUI.js"></script>
+        <script src="js/Unit.js"></script>
+        <script src="js/UnitManager.js"></script>
+        <script src="js/UnitPlacementUI.js"></script>
+        <script src="js/ShopUI.js"></script>
+        <script src="js/TextBox.js"></script>
+        <script src="js/LootObject.js"></script>
+        <script src="js/LootUI.js"></script>
+        <script src="js/AddLoadProgress.js"></script>
+        <script src="js/MinigameData.js"></script>
+        <script src="js/MinigameUI.js"></script>
+        <script src="js/scrollable.js"></script>
+        <script src="js/Battle.js"></script>
+        <script src="js/BattleManager.js"></script>
+        <script src="js/TextObj.js"></script>
+        <script src="js/TextManager.js"></script>
+        <script src="js/Projectile.js"></script>
+        <script src="js/Generator.js"></script>
+        <script src="js/GeneratorManager.js"></script>
+        <script src="js/AddLoadProgress.js"></script>
+        <script src="js/StatusEffect.js"></script>
+        <script src="js/Tile.js"></script>
+        <script src="js/Collectible.js"></script>
+        <script src="js/CollectibleManager.js"></script>
+        <script src="js/Map.js"></script>
+        <script src="js/GameDataManager.js"></script>
+        <script src="js/BookManager.js"></script>
+        <script src="js/BookDialog.js"></script>
+        <script src="js/FramerateLimiter.js"></script>
+        <script src="js/DialogManager.js"></script>
+        <script src="js/AudioDescriptor.js"></script>
+        <script src="js/AudioManager.js"></script>
+        <script src="js/PortraitUIButton.js"></script>
+        <script src="js/UICanvas.js"></script>
+        <script src="js/AddLoadProgress.js"></script>
+        <script src="js/SoundManager2.js"></script>
+        <script src="js/main.js"></script>
+        
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-49681422-1', 'oenx.net');
+        ga('send', 'pageview');
+        </script>
+
+    </body>
+</html>

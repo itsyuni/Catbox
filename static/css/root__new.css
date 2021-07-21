@@ -1,0 +1,634 @@
+
+@media screen and (min-width: 768px) {
+    .section__start {
+        background-image: url(/static/images/section__background.jpg);
+        height: 280px;
+        background-position: top;
+        background-size: auto;
+        margin-top: fixed;
+    }
+    .section__start__text {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 600;
+            font-size: 45px;
+            margin-left: 50px;
+            margin-top: 50px;
+    }
+    .section__start__hr {
+        background-color: #cbbef5;
+        border-radius: 15px;
+        border: 3px solid #cbbef5;
+        margin-left: 50px;
+        margin-right: 550px;
+        margin-bottom: 15px;
+    }
+    .section__start__descp {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 300;
+            font-size: 17px;
+            margin-left: 50px;
+            margin-top: 30px;
+            margin-right: 50px;
+    }
+    .section__start__ic {
+        margin-left: 50px;
+        width: 128px;
+        height: 128px;
+        margin-top: 50px;
+        float: left;
+    }
+    .section__start__ic__header {
+        margin-left: 50px;
+        margin-top: 75px;
+        font-weight: 600;
+        font-size: 26px;
+    }
+    .section__start__ic__descp {
+        margin-left: 50px;
+        font-weight: 300;
+        font-size: 15px;
+        margin-right: 500px;
+    }
+    .section__answers__text {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 600;
+            font-size: 45px;
+    }
+    .section__about {
+        background-image: url(/static/images/about__background.jpg);
+        height: 250px;
+        background-position: top;
+        background-size: auto;
+        margin-top: fixed;
+    }
+    .section__about__text {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 600;
+            font-size: 40px;
+            margin-left: 50px;
+            margin-top: 50px;
+    }
+    .section__about__hr {
+        background-color: #cbf5be;
+        border-radius: 15px;
+        border: 3px solid #cbf5be;
+        margin-left: 50px;
+        margin-right: 600px;
+        margin-bottom: 15px;
+    }
+    .section__about__descp {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 300;
+            font-size: 15px;
+            margin-left: 50px;
+            margin-top: 30px;
+            margin-right: 450px;
+    }
+    .br__about {
+        margin-top: 450px;
+    }
+    .section__about__two__descp {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 350;
+            font-size: 22px;
+            margin-left: 150px;
+            margin-right: 150px;
+    }
+    .section__ecosystem {
+        background-image: url(/static/images/ecosystem__background.jpg);
+        height: 250px;
+        background-position: top;
+        background-size: auto;
+        margin-top: fixed;
+    }
+    .section__ecosystem__text {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 600;
+            font-size: 40px;
+            margin-left: 50px;
+            margin-top: 50px;
+    }
+    .section__ecosystem__hr {
+        background-color: #f5e6be;
+        border-radius: 15px;
+        border: 3px solid #f5e6be;
+        margin-left: 50px;
+        margin-right: 600px;
+        margin-bottom: 15px;
+    }
+    .section__ecosystem__descp {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 300;
+            font-size: 15px;
+            margin-left: 50px;
+            margin-top: 30px;
+            margin-right: 450px;
+    }
+    .section__about__two__descp {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 350;
+            font-size: 22px;
+            margin-left: 150px;
+            margin-right: 150px;
+    }
+    .section__thanks {
+        background-image: url(/static/images/thanks__background.jpg);
+        height: 250px;
+        background-position: top;
+        background-size: cover;
+        margin-top: fixed;
+    }
+    .section__thanks__text {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 600;
+            font-size: 40px;
+            margin-left: 50px;
+            margin-top: 50px;
+    }
+    .section__thanks__hr {
+        background-color: #a0fffa;
+        border-radius: 15px;
+        border: 3px solid #a0fffa;
+        margin-left: 50px;
+        margin-right: 600px;
+        margin-bottom: 15px;
+    }
+    .section__thanks__descp {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 300;
+            font-size: 15px;
+            margin-left: 50px;
+            margin-top: 30px;
+            margin-right: 450px;
+    }
+    .section__brand {
+        background-image: url(/static/images/brand__background.jpg);
+        height: 250px;
+        background-position: top;
+        background-size: cover;
+        margin-top: fixed;
+    }
+    .section__brand__text {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 600;
+            font-size: 40px;
+            margin-left: 50px;
+            margin-top: 50px;
+    }
+    .section__brand__hr {
+        background-color: #a0fffa;
+        border-radius: 15px;
+        border: 3px solid #a0fffa;
+        margin-left: 50px;
+        margin-right: 600px;
+        margin-bottom: 15px;
+    }
+    .section__brand__descp {
+        font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 300;
+            font-size: 15px;
+            margin-left: 50px;
+            margin-top: 30px;
+            margin-right: 450px;
+    }
+    }
+
+    @media screen and (min-width: 1068px) {
+        .section__start {
+            background-image: url(/static/images/section__background.jpg);
+            height: 250px;
+            background-position: top;
+            background-size: auto;
+            margin-top: fixed;
+        }
+        .section__start__text {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 600;
+                font-size: 45px;
+                margin-left: 50px;
+                margin-top: 50px;
+        }
+        .section__start__hr {
+            background-color: #cbbef5;
+            border-radius: 15px;
+            border: 3px solid #cbbef5;
+            margin-left: 50px;
+            margin-right: 1200px;
+            margin-bottom: 15px;
+        }
+        .section__start__descp {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 300;
+                font-size: 20px;
+                margin-left: 50px;
+                margin-top: 30px;
+                margin-right: 550px;
+        }
+        .section__start__ic {
+            margin-left: 50px;
+            width: 128px;
+            height: 128px;
+            margin-top: 50px;
+            float: left;
+        }
+        .section__start__ic__header {
+            margin-left: 50px;
+            margin-top: 75px;
+            font-weight: 600;
+            font-size: 26px;
+        }
+        .section__start__ic__descp {
+            margin-left: 50px;
+            font-weight: 300;
+            font-size: 15px;
+            margin-right: 500px;
+        }
+        .section__answers__text {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 600;
+                font-size: 45px;
+        }
+        .section__about {
+            background-image: url(/static/images/about__background.jpg);
+            height: 250px;
+            background-position: top;
+            background-size: auto;
+            margin-top: fixed;
+        }
+        .section__about__text {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 600;
+                font-size: 45px;
+                margin-left: 50px;
+                margin-top: 50px;
+        }
+        .section__about__hr {
+            background-color: #cbf5be;
+            border-radius: 15px;
+            border: 3px solid #cbf5be;
+            margin-left: 50px;
+            margin-right: 1200px;
+            margin-bottom: 15px;
+        }
+        .section__about__descp {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 300;
+                font-size: 22px;
+                margin-left: 50px;
+                margin-top: 30px;
+                margin-right: 550px;
+        }
+        .br__about {
+            margin-top: 350px;
+        }
+        .section__about__two__descp {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 350;
+                font-size: 22px;
+                margin-left: 150px;
+                margin-right: 150px;
+        }
+        .section__ecosystem {
+            background-image: url(/static/images/ecosystem__background.jpg);
+            height: 250px;
+            background-position: top;
+            background-size: auto;
+            margin-top: fixed;
+        }
+        .section__ecosystem__text {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 600;
+                font-size: 45px;
+                margin-left: 50px;
+                margin-top: 50px;
+        }
+        .section__ecosystem__hr {
+            background-color: #f5e6be;
+            border-radius: 15px;
+            border: 3px solid #f5e6be;
+            margin-left: 50px;
+            margin-right: 1200px;
+            margin-bottom: 15px;
+        }
+        .section__ecosystem__descp {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 300;
+                font-size: 22px;
+                margin-left: 50px;
+                margin-top: 30px;
+                margin-right: 550px;
+        }
+        .section__thanks {
+            background-image: url(/static/images/thanks__background.jpg);
+            height: 250px;
+            background-position: top;
+            background-size: cover;
+            margin-top: fixed;
+        }
+        .section__thanks__text {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 600;
+                font-size: 45px;
+                margin-left: 50px;
+                margin-top: 50px;
+        }
+        .section__thanks__hr {
+            background-color: #a0fffa;
+            border-radius: 15px;
+            border: 3px solid #a0fffa;
+            margin-left: 50px;
+            margin-right: 1200px;
+            margin-bottom: 15px;
+        }
+        .section__thanks__descp {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 300;
+                font-size: 22px;
+                margin-left: 50px;
+                margin-top: 30px;
+                margin-right: 550px;
+        }
+        .section__thanks__name {
+            font-family: Avenir Next Cyr;
+            color: aliceblue;
+            font-weight: 300;
+            font-size: 23px;
+        }
+        .section__brand {
+            background-image: url(/static/images/brand__background.jpg);
+            height: 250px;
+            background-position: top;
+            background-size: cover;
+            margin-top: fixed;
+        }
+        .section__brand__text {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 600;
+                font-size: 45px;
+                margin-left: 50px;
+                margin-top: 50px;
+        }
+        .section__brand__hr {
+            background-color: #a0fffa;
+            border-radius: 15px;
+            border: 3px solid #a0fffa;
+            margin-left: 50px;
+            margin-right: 1200px;
+            margin-bottom: 15px;
+        }
+        .section__brand__descp {
+            font-family: Avenir Next Cyr;
+                color: aliceblue;
+                font-weight: 300;
+                font-size: 22px;
+                margin-left: 50px;
+                margin-top: 30px;
+                margin-right: 550px;
+        }
+        }
+        
+@media screen and (max-width: 768px) {
+.section__start {
+    background-image: url(/static/images/section__background.jpg);
+    height: 350px;
+    background-position: right;
+    background-size: auto;
+    margin-top: -50px;
+}
+.section__start__text {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 600;
+        font-size: 23px;
+        margin-left: 50px;
+        padding-top: 100px;
+}
+.section__start__hr {
+    background-color: #cbbef5;
+    border-radius: 15px;
+    border: 3px solid #cbbef5;
+    margin-left: 50px;
+    margin-right: 250px;
+    margin-bottom: 15px;
+}
+.section__start__descp {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 300;
+        font-size: 13px;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-right: 50px;
+}
+.section__start__ic {
+    margin-left: 25px;
+    width: 128px;
+    height: 128px;
+    margin-top: 50px;
+    float: left;
+    margin-right: 25px;
+}
+.section__start__ic__header {
+    margin-left: 50px;
+    margin-top: 75px;
+    font-weight: 600;
+    font-size: 26px;
+}
+.section__start__ic__descp {
+    margin-left: 50px;
+    font-weight: 300;
+    font-size: 11px;
+    margin-right: 50px;
+}
+.ic__descp__long {
+    margin-right: 7px !important;
+    margin-left: 180px !important;
+}
+.section__answers__text {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 600;
+        font-size: 45px;
+}
+.br__start {
+    margin-top: 100px;
+}
+.section__about {
+    background-image: url(/static/images/about__background.jpg);
+    height: 300px;
+    background-position: right;
+    background-size: auto;
+    margin-top: -50px;
+}
+.section__about__text {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 600;
+        font-size: 23px;
+        margin-left: 50px;
+        padding-top: 100px;
+}
+.section__about__hr {
+    background-color: #cbf5be;
+    border-radius: 15px;
+    border: 3px solid #cbf5be;
+    margin-left: 50px;
+    margin-right: 250px;
+    margin-bottom: 15px;
+}
+.section__about__descp {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 300;
+        font-size: 13px;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-right: 150px;
+}
+.br__about {
+    margin-top: 500px;
+}
+.section__about__two__descp {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 350;
+        font-size: 16px;
+        margin-left: 29px;
+        margin-right: 29px;
+}
+.br__about__two {
+    margin-top: 75px;
+}
+.section__ecosystem {
+    background-image: url(/static/images/ecosystem__background.jpg);
+    height: 365px;
+    background-position: right;
+    background-size: cover;
+    margin-top: -50px;
+}
+.section__ecosystem__text {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 600;
+        font-size: 23px;
+        margin-left: 50px;
+        padding-top: 100px;
+}
+.section__ecosystem__hr {
+    background-color: #f5e6be;
+    border-radius: 15px;
+    border: 3px solid #f5e6be;
+    margin-left: 50px;
+    margin-right: 250px;
+    margin-bottom: 15px;
+}
+.section__ecosystem__descp {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 300;
+        font-size: 13px;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-right: 150px;
+}
+.section__thanks {
+    background-image: url(/static/images/thanks__background.jpg);
+    height: 350px;
+    background-position: right;
+    background-size: auto;
+    margin-top: -50px;
+}
+.section__thanks__text {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 600;
+        font-size: 23px;
+        margin-left: 50px;
+        padding-top: 100px;
+}
+.section__thanks__hr {
+    background-color: #a0fffa;
+    border-radius: 15px;
+    border: 3px solid #a0fffa;
+    margin-left: 50px;
+    margin-right: 250px;
+    margin-bottom: 15px;
+}
+.section__thanks__descp {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 300;
+        font-size: 13px;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-right: 150px;
+}
+.section__brand {
+    background-image: url(/static/images/brand__background.jpg);
+    height: 300px;
+    background-position: right;
+    background-size: auto;
+    margin-top: -50px;
+}
+.section__brand__text {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 600;
+        font-size: 23px;
+        margin-left: 50px;
+        padding-top: 100px;
+}
+.section__brand__hr {
+    background-color: #a0fffa;
+    border-radius: 15px;
+    border: 3px solid #a0fffa;
+    margin-left: 50px;
+    margin-right: 250px;
+    margin-bottom: 15px;
+}
+.section__brand__descp {
+    font-family: Avenir Next Cyr;
+        color: aliceblue;
+        font-weight: 300;
+        font-size: 13px;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-right: 150px;
+}
+}
+
+
+
+.bg-darkpr {
+    background-color: #16141f;
+}
+.text-white__new {
+    color: #dcd1fd;
+}
+.text-primary__new {
+    color: #978fac;
+}

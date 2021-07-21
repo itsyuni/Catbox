@@ -1,0 +1,119 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.form___button{
+    display: block;
+    padding: .75rem 2rem;
+    outline: 1px;
+    border-radius: 10px;
+    border-color: #ffc400;
+    font-size: var(--normal-font-size);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+    background-color: rgb(53, 53, 53);
+    color: #fff;
+  }
+  .form___button:value {
+    color: #ffa600;
+  }
+  .form___button:hover{
+    background-color: #ffa600;
+  }
+
+  .form___button__dev{
+    display: block;
+    padding: .75rem 2rem;
+    outline: 1px;
+    border-radius: 10px;
+    border-color: #6d6d6d;
+    font-size: var(--normal-font-size);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+    background-color: rgb(53, 53, 53);
+    color: #fff;
+  }
+  .form___button__dev:value {
+    color: #ffa600;
+  }
+  .form___button__dev:hover{
+    background-color: #6d6d6d;
+  }
+
+  .form___button__prim{
+    display: block;
+    padding: .75rem 2rem;
+    outline: 1px;
+    border-radius: 10px;
+    border-color: #0059ff;
+    font-size: var(--normal-font-size);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+    background-color: rgb(53, 53, 53);
+    color: #fff;
+  }
+  .form___button__prim:value {
+    color: #0059ff;
+  }
+  .form___button__prim:hover{
+    background-color: #6d6d6d;
+  }
+  
+.site-container {
+    margin: 2rem auto;
+    max-width: calc(100% - 80px);
+}
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+    gap: 1rem;
+    position: center;
+}
+.article-image {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.article-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+.article-card {
+    background: #ffffff;
+    border-radius: 20px;
+    transition: 0.3s;
+    position: center;
+}
+.article-content {
+    padding: 2rem;
+}
+.article-content .card-category {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+.article-content .card-title {
+    margin: 1rem 0;
+    color: #fff;
+}
+.article-content .card-excerpt {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #fff;
+}
+@media screen and (min-width: 768px) {
+    .site-container {
+        max-width: 1408px;
+    }
+    .article-card {
+        display: grid;
+    }
+}

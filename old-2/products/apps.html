@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catbox | группа сервисов для тебя</title>
+    <link rel="stylesheet" href="/static/css/header__loggedd.css">
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/static/css/cards.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/fonts/sf/stylesheet.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+      body {
+            background-color: #141c2b;
+        }
+        .bg-darkpr {
+            background-color: #0d121b;
+        }
+        a, p, p, li, h1, h2, h3, h4, h5, h6, .catbin-descp {
+            font-family: SF UI Text;
+            color: #fff;
+        }
+        @media screen and (min-width: 768px) {
+          .headertext {
+            font-size: 50px; margin-left: 220px;
+          }
+          .headertext-pr {
+            font-size: 25px; margin-left: 220px; margin-right: 220px;
+          }
+          .headertext2 {
+            font-size: 35px; margin-left: 85px; margin-right: 85px;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          .headertext {
+            font-size: 25px; margin-left: 25px; margin-right: 25px;
+          }
+          .headertext2 {
+            font-size: 20px; margin-left: 55px; margin-right: 55px;
+          }
+          .headertext-pr {
+            font-size: 17px; margin-left: 25px; margin-right: 25px;
+          }
+        }
+            .catbin-featch {
+              margin-right: 64px;
+              margin-left: 64px;
+            font-family: SF UI Text;
+            }
+
+            .form__button{
+                display: block;
+                outline: none;
+                padding: .75rem 2rem;
+                border: none;
+                background-color: #DADCE0;
+                color: #000;
+                font-size: var(--normal-font-size);
+                border-radius: .5rem;
+                cursor: pointer;
+                transition: .3s;
+                width: 250px;
+                margin-top: auto;
+                }
+                .catbin-descp {
+                    color: #fff;
+                    font-family: SF UI Text;
+                }
+
+            @media (min-width: 1025px) {
+            .footer {
+              background-color: #151515;
+              height: 230px;
+            }
+            .imgfooter {
+              width: 100px;
+              height: 130px;
+              margin-left: 64px;
+              margin-top: 20px;
+            }
+            .catbin-descp {
+              margin-right: 1200px;
+              margin-left: 256px;
+                font-family: 'Montserrat';
+                padding-bottom: -1000px;
+            }
+          
+          .textfooter {
+            margin-left: 64px;
+          } }
+
+            @media (min-width: 801px) {
+              .footer {
+              background-color: #151515;
+              height: 230px;
+            }
+            .imgfooter {
+              width: 100px;
+              height: 130px;
+              margin-left: 64px;
+              margin-top: 20px;
+            }
+            .catbin-descp {
+              margin-right: 600px;
+              margin-left: 64px;
+                font-family: 'Montserrat';
+            }
+          
+          .textfooter {
+            margin-left: 64px;
+          } }
+
+            
+            @media (max-width: 1024px) {
+              .footer {
+              background-color: #151515;
+              height: 230px;
+            }
+            .imgfooter {
+              width: 100px;
+              height: 130px;
+              margin-left: 64px;
+              margin-top: 20px;
+            }
+            .catbin-descp {
+              margin-right: 500px;
+              margin-left: 64px;
+                font-family: 'Montserrat';
+                padding-bottom: -100px;
+            }
+          
+          .textfooter {
+            margin-left: 64px;
+          } }
+
+            @media (max-width: 800px) {
+              .footer {
+              background-color: #151515;
+              height: 230px;
+            }
+            .imgfooter {
+              width: 100px;
+              height: 130px;
+              margin-left: 64px;
+              margin-top: 20px;
+            }
+          
+          .textfooter {
+            margin-left: 64px;
+          } }
+          .catbin-descp {
+              margin-right: 150px;
+              margin-left: 32px;
+                font-family: 'Montserrat';
+            }
+            a, p, h1, h2, h3, h4, h5, h6 {
+              color: aliceblue;
+            }
+
+
+            
+
+
+        </style>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+                <a href="#" class="nav__logo"><img class="nav__logo__img" src="/static/images/catboxlogo__white__beta.png" width="500" height="300"></a>
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                  <li class="nav__item"><a href="/" class="nav__link">Главная</a></li>
+                  <li class="nav__item"><a href="/about" class="nav__link">О нас</a></li>
+                  <li class="nav__item"><a href="/ecosystem" class="nav__link active">Продукты CBXGroup</a></li>
+                  <li class="nav__item"><a href="/app/" class="nav__link">Войти в аккаунт</a></li>
+                </ul>
+            </div>
+    
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <script src="/static/js/header.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <br><br><br><br><br>
+<img src="/static/images/products__apps.png" style="height: auto;
+width:100%;">
+<br><br><br>
+<img src="/static/images/clock.png" class="catbin-descp">
+<h3 style="font-family: SF UI Text;" class="catbin-descp"><b>Везде и круглосуточно</b></h3>
+<h5 style="font-family: SF UI Text;" class="catbin-descp">CatboxApps доступен везде по всему миру и круглосуточно, приложения будут летать где бы вы не зашли!</h5>
+<br><br>
+<img src="/static/images/interface.png" class="catbin-descp">
+<h3 style="font-family: SF UI Text;" class="catbin-descp"><b>Разнообразные приложения</b></h3>
+<h5 style="font-family: SF UI Text;" class="catbin-descp">Приложений пока немного, но они будут расширяться, тем самым CatboxApps станет гибкой платформой!</h5>
+<br><br>
+<img src="/static/images/multiple.png" class="catbin-descp">
+<h3 style="font-family: SF UI Text;" class="catbin-descp"><b>Кроссплатформенность</b></h3>
+<h5 style="font-family: SF UI Text;" class="catbin-descp">Приложения будут хорошо работать и на телефоне, и на планшете, и даже на телевизоре с поддержкой веб-браузера!</h5>
+            <br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
+            <footer class="bg-darkpr text-white pt-5 pb-4">
+                <div class="container text-md-left">
+                    <div class="row text-md-left">
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Catbox</h5>
+                            <p>Catbox - это экосистема, которая была создана двумя людьми. Наша цель - это упростить использование с минимальным сбором данных, а также оптимизация по всему миру.</p>
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Продукты</h5>
+                            <p>
+                                <a href="/products/apps" class="text-white" style="text-decoration: none;"> CatboxApps</a>
+                            </p>
+                            <p>
+                                <a href="/products/games" class="text-white" style="text-decoration: none;"> CatboxGames</a>
+                            </p>
+                            <p>
+                                <a href="/products/proxy" class="text-white" style="text-decoration: none;"> CatboxProxy</a>
+                            </p>
+                            <p>
+                                <a href="/products/ms-bin" class="text-white" style="text-decoration: none;"> MS-BIN</a>
+                            </p>
+                            <p>
+                                <a href="/ecosystem" class="text-white" style="text-decoration: none;"> Все продукты CBXGroup</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold text-primary">Другие ссылки</h6>
+                            <p>
+                                <a href="/terms" class="text-white" style="text-decoration: none;"> Публичная оферта</a>
+                            </p>
+                            <p>
+                                <a href="/privacy" class="text-white" style="text-decoration: none;"> Политика конфиденциальности</a>
+                            </p>
+                            <p>
+                                <a href="https://status.catbox-gr.ru" class="text-white" style="text-decoration: none;"> Статус серверов</a>
+                            </p>
+                            <p>
+                                <a href="/app/reg" class="text-white" style="text-decoration: none;"> Регистрация</a>
+                            </p>
+                            <p>
+                                <a href="/app/login" class="text-white" style="text-decoration: none;"> Авторизация</a>
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold text-primary">Контакты</h6>
+                            <p>
+                                <a style="text-decoration: none; color: #fff;" href="mailto:catboxgroup@gmail.com"><i class="fas fa-envelope mr-3"></i>catboxgroup@gmail.com</a>
+                            </p>
+                            <p>
+                                <a style="text-decoration: none; color: #fff;" href="https://t.me/catboxgroup"><i class="fab fa-telegram mr-3"></i>https://t.me/catboxgroup</a>
+                            </p>
+                        </div>
+            
+                    </div>
+                </div>
+            </footer>
