@@ -4,7 +4,7 @@
 Поэтому я решил сделать проект опенсурс-ным.<br><br>
 Работает на PHP, SQL, JS, HTML, CSS
 
-UPD 12.08.2021: Catbox продолжит своё развитие, под форком https://github.com/MaksimMohooks/Catbox и статусом LTS.
+<b>UPD 12.08.2021:</b> Catbox продолжит своё развитие, под форком https://github.com/MaksimMohooks/Catbox и статусом LTS.
 
 ## Как поставить Catbox на свой сервер?
 - Легко, загружаем файлы на сервер, а на MySQL сервер импортируем файл CatboxDB.sql это наша БД.
