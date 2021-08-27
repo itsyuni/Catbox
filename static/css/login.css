@@ -1,0 +1,130 @@
+body {
+    background-image: url(/static/images/login__header__background.jpg);
+    background-position: top;
+    background-size: cover;
+    font-family: SF UI Text;
+}
+
+.input__slider {
+    font-family: Avenir Next Cyr;
+    color: aliceblue;
+    font-weight: 300;
+}
+
+a,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: aliceblue;
+    font-family: SF UI Text;
+    text-decoration: none;
+}
+
+.login__header {
+    font-family: Avenir Next Cyr;
+    color: aliceblue;
+    font-weight: 500;
+}
+
+.alert-dangernew {
+    background-color: rgb(83, 0, 18);
+    border-color: rgb(255, 0, 64);
+    font-family: Avenir Next Cyr;
+    color: aliceblue;
+    font-weight: 300;
+    border-radius: 15px;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.021);
+    backdrop-filter: blur(20px);
+}
+
+@media screen and (min-width: 768px) {
+    .content {
+        border-radius: 11px;
+        transition: 0.3s;
+    }
+    .main {
+        margin-right: 100px;
+        margin-left: 100px;
+        transition: 0.3s;
+    }
+    .inputs__group {
+        margin-right: 50px;
+        margin-left: 50px;
+        transition: 0.3s;
+    }
+    .login__header {
+        font-size: 30px;
+        transition: 0.3s;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .content {
+        border-radius: 11px;
+        transition: 0.3s;
+    }
+    .main {
+        margin-right: 225px;
+        margin-left: 225px;
+        transition: 0.3s;
+    }
+    .inputs__group {
+        margin-right: 150px;
+        margin-left: 150px;
+        transition: 0.3s;
+    }
+    .login__header {
+        font-size: 35px;
+        transition: 0.3s;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        border-radius: 11px;
+    }
+    .main {
+        margin-right: 25px;
+        margin-left: 25px;
+        transition: 0.3s;
+    }
+    .inputs__group {
+        margin-right: 35px;
+        margin-left: 35px;
+        transition: 0.3s;
+    }
+    .login__header {
+        font-size: 25px;
+        transition: 0.3s;
+    }
+}
+
+.alertlog {
+    width: 920px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+@media (min-width: 801px) {
+    .alertlog {
+        width: 920px;
+        height: 100px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .alertlog {
+        width: 600px;
+        height: 100px;
+        border-radius: 10px;
+    }
+}

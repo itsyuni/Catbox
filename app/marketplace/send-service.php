@@ -1,6 +1,4 @@
 <?php 
-
-
 include($_SERVER['DOCUMENT_ROOT']."/classes/DB.php");
 include($_SERVER['DOCUMENT_ROOT']."/classes/ValidAuth__loggedd.php");
 if(isset($_POST['recoveryaccount'])) {
@@ -10,7 +8,6 @@ if(isset($_POST['recoveryaccount'])) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $namedev = $_POST['namedev'];
-    $link = $_POST['link'];
 
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );

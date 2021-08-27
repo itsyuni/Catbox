@@ -2,7 +2,7 @@
 class DB {
 
         private static function connect() {
-                $pdo = new PDO('mysql:host=localhost;dbname=неймдб;charset=utf8', 'юзер', 'пасс');
+                $pdo = new PDO('mysql:host=localhost;dbname=mohooks_catbox;charset=utf8', 'mohooks_mohooks', 'chikiMOHOOKSING___7412___7412___');
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return $pdo;
         }
