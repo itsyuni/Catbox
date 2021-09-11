@@ -6,7 +6,7 @@
 
 <b>UPD 12.08.2021:</b> Catbox продолжит своё развитие, под форком https://github.com/MaksimMohooks/Catbox и статусом LTS.<br>
 <b>UPD 08.09.2021:</b> Catbox LTS меняет лицензию на MIT License<br>
-<b>UPD 11.09.2021:</b> Обновления главного репизитория itsyuni/Catbox до версии LTS 1.1
+<b>UPD 11.09.2021:</b> Обновления главного репозитория itsyuni/Catbox до версии LTS 1.1
 
 ## Как поставить Catbox на свой сервер?
 - Легко, загружаем файлы на сервер, а на MySQL сервер импортируем файл CatboxDB.sql это наша БД.
