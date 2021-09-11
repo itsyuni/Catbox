@@ -1,12 +1,12 @@
 # Catbox (ныне Catbox LTS)
 Проект группы мини-приложений в одном сайте (ранее Catbin)<br>
-Из-за неизвестного конфликта с Максимом Жуйковым, вся команда CBXGroup приняла решение о закрытие проекта Catbox.<br>
-Поэтому я решил сделать проект опенсурс-ным.<br><br>
-Работает на PHP, SQL, JS, HTML, CSS
+Этот <a href="https://github.com/itsyuni/Catbox">репозиторий</a> (itsyuni/Catbox) считается главным репозиторием проекта, и периодически обновляется.<br>
+Под лицензией <a href="https://github.com/itsyuni/Catbox/blob/main/LICENSE">MIT</a>. Работает на PHP, SQL, JS, HTML, CSS.
 
-<b>UPD 12.08.2021:</b> Catbox продолжит своё развитие, под форком https://github.com/MaksimMohooks/Catbox и статусом LTS.<br>
-<b>UPD 08.09.2021:</b> Catbox LTS меняет лицензию на MIT License<br>
-<b>UPD 11.09.2021:</b> Обновления главного репозитория itsyuni/Catbox до версии LTS 1.1
+## Ветка обновлений репозитория
+<b>12.08.2021</b>: Catbox продолжит своё развитие, под форком https://github.com/MaksimMohooks/Catbox и статусом LTS.<br>
+<b>08.09.2021</b>: Catbox LTS меняет лицензию на MIT License<br>
+<b>11.09.2021</b>: Обновления главного репозитория itsyuni/Catbox до версии LTS 1.1
 
 ## Как поставить Catbox на свой сервер?
 - Легко, загружаем файлы на сервер, а на MySQL сервер импортируем файл CatboxDB.sql это наша БД.
