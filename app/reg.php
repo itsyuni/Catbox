@@ -2,10 +2,6 @@
 include($_SERVER['DOCUMENT_ROOT'].'/classes/DB.php');
 include($_SERVER['DOCUMENT_ROOT'].'/classes/ValidAuth.php');
 include($_SERVER['DOCUMENT_ROOT'].'/classes/UserInfo.php');
-ini_set('error_reporting', E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-
 
 if (isset($_POST['createaccount'])) {
     $fname = $_POST['fname'];

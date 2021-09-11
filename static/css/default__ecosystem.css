@@ -1,0 +1,29 @@
+#maia-header .maia-aux:after,
+#maia-header .maia-util:after,
+#maia-main:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden
+}
+
+#maia-main,
+.maia-aux {
+    margin: auto;
+    max-width: 978px
+}
+
+#maia-nav-x.maia-compact .maia-aux {
+    max-width: none
+}
+
+#maia-nav-x.maia-compact .maia-aux>div,
+#maia-nav-x.maia-compact .maia-aux>a {
+    display: none
+}
+
+#maia-nav-root .maia-aux {
+    height: 25px;
+    position: relative
+}

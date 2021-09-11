@@ -1,0 +1,53 @@
+<!-- HelloPreload http://hello-site.ru/preloader/ -->
+<style type="text/css">
+    #hdr {
+        display: block center center no-repeat;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 1000px;
+    }
+    
+    #hellopreloader_preload {
+        display: block;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 1000px;
+        background: #22313F url(http://hello-site.ru//main/images/preloads/oval.svg) center center no-repeat;
+        background-size: 41px;
+    }
+</style>
+<div id="hellopreloader">
+    <div id="hellopreloader_preload"></div>
+    <p id="hdr">CBXInitApp</p>
+
+</div>
+<script type="text/javascript">
+    var hellopreloader = document.getElementById("hellopreloader_preload");
+    var hellopreloader_t = document.getElementById("hdr");
+
+    function fadeOutnojquery(el) {
+        el.style.opacity = 1;
+        var interhellopreloader = setInterval(function() {
+            el.style.opacity = el.style.opacity - 0.05;
+            if (el.style.opacity <= 0.05) {
+                clearInterval(interhellopreloader);
+                hellopreloader.style.display = "none";
+                hellopreloader_t.style.display = "none";
+            }
+        }, 16);
+    }
+    window.onload = function() {
+        setTimeout(function() {
+            fadeOutnojquery(hellopreloader);
+        }, 1000);
+    };
+</script>
+<!-- HelloPreload http://hello-site.ru/preloader/ -->

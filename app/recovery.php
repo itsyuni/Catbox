@@ -275,8 +275,8 @@ if(isset($_POST['recoveryaccount'])) {
             <a href="/app/login">Кажется, я вспомнил пароль от аккаунта</a>
         </center>
     </div>
-    <?php } else { 
-            if ($tokenvalid) { ?>
+    <?php  if (isset($_GET['token'])) {
+    if (!$tokenvalid) { ?>
         <div class="main">
         <br><br><br>
         <p class="login__header"><b>Восстановление аккаунта CBXID</b></p>
@@ -301,7 +301,7 @@ if(isset($_POST['recoveryaccount'])) {
             <br><br>
             <form action="recovery?token=<?php echo $token; ?>" method="post">
                 <div class="inputs__group">
-                    <p class="input__slider">Новые пароль</p>
+                    <p class="input__slider">Новый пароль</p>
                     <div class="input-group mb-3">
                         <input name="password" type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
@@ -311,14 +311,14 @@ if(isset($_POST['recoveryaccount'])) {
                     </div>
                     <br>
                     <div class="d-grid gap-2">
-                        <button name="changeaccount" class="btn btn-login" type="submit">Отправить письмо</button>
+                        <button name="changeaccount" class="btn btn-login" type="submit">Восстановить</button>
                     </div>
                     <br><br>
                 </div>
             </form>
         </div>
         <br><br>
-    <?php } }  ?>
+    <?php } } }  ?>
 </body>
 
 </html>

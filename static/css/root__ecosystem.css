@@ -1,0 +1,90 @@
+        @import url("/static/css/default__ecosystem.css");
+        li>p {
+            font-size: 15px;
+        }
+        
+        .imgr {
+            width: 80px;
+        }
+        
+        .mrkt {
+            width: 80px !important;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .products-section {
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+            li>p {
+                font-size: 13px;
+            }
+        }
+        
+        @media screen,
+        projection {
+            .products-section h2 {
+                clear: left;
+                font-size: 1.077em;
+                margin-bottom: 0;
+                padding-bottom: 0
+            }
+            html[dir="rtl"] .products-section h2 {
+                clear: right
+            }
+            .products-section ul {
+                display: inline-block;
+                list-style: none;
+                margin: 0 0 13px;
+                padding: 0;
+                width: 100%
+            }
+            .products-section li {
+                display: inline;
+                float: left;
+                line-height: 1.4;
+                margin: 11px 0 .2em;
+                position: relative;
+                width: 50%
+            }
+            html[dir="rtl"] .products-section li {
+                float: right
+            }
+            .products-section li.break {
+                clear: left
+            }
+            html[dir="rtl"] .products-section li.break {
+                clear: right
+            }
+            .products-section li a {
+                font-weight: bold;
+                line-height: 22px
+            }
+            *+html .products-section li {
+                width: 49.9%
+            }
+            * html .products-section li {
+                width: 49%
+            }
+            .products-section img {
+                float: left;
+                padding: 0 1em 0 0;
+                margin: 5px 0 0
+            }
+            html[dir="rtl"] .products-section img {
+                float: right;
+                padding: 0 0 0 1em
+            }
+            .products-section li p {
+                color: #444;
+                margin: 0 2em 0 3.6em
+            }
+        }
+        
+        @media screen and (max-width:480px) {
+            div.products-section li {
+                display: block;
+                float: none;
+                width: 100%
+            }
+        }
